@@ -13,7 +13,13 @@ get '/life' do
   "I JUST WANNA DIE!"
 end
 
-get '/me' do
-  @random_name = ["Mr Meeseeks", "Jerry", "Mr Needful"].sample
+get '/random-me' do
+  @name = ["Mr Meeseeks", "Jerry", "Mr Needful"].sample
+  erb(:index)
+end
+
+get '/named-me' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
