@@ -15,11 +15,15 @@ end
 
 get '/random-me' do
   @name = ["Mr Meeseeks", "Jerry", "Mr Needful"].sample
-  erb(:index)
+  erb :index
 end
 
-get '/named-me' do
+post '/named-me' do
   p params
   @name = params[:name]
-  erb(:index)
+  erb :index
+end
+
+get '/form' do
+  erb :form
 end
