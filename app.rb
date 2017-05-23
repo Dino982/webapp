@@ -14,5 +14,6 @@ get '/life' do
 end
 
 get '/me' do
+  @random_name = ["Mr Meeseeks", "Jerry", "Mr Needful"].sample
   erb(:index)
 end
